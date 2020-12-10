@@ -26,9 +26,28 @@ export default class App {
         return cadena;
     }
 
+    obtenerDivisibles(numero)
+    {
+        let divisibles = 0;
+        let i = 1;
+
+        do
+        {
+            if (numero%i == 0)
+            {
+                divisibles++;
+            }
+            i++;
+
+        }while(i<=numero);
+
+        return divisibles;
+    }
+
 }
 
 let app = new App();
 
 console.log(app.factorial(5));
 console.log(app.convertirAString(10));
+console.log(app.obtenerDivisibles(12));
