@@ -12,11 +12,23 @@ export default class App {
 
     }
 
+    convertirAString(numero)
+    {
+        let cadena = "";
+        let i = 1;
 
+        while(i <= numero)
+        {
+            cadena+="*";
+            i++;
+        }
+
+        return cadena;
+    }
 
 }
 
 let app = new App();
 
 console.log(app.factorial(5));
-
+console.log(app.convertirAString(10));
